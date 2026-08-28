@@ -1,0 +1,137 @@
+#!/bin/sh
+# 多 AI 协作交接工具。三个动作：
+#   sh .agent/handoff in  <codex|grok|cursor>
+#   sh .agent/handoff out <codex|grok|cursor> "一句话说明" [--force]
+#   sh .agent/handoff decide "选了 X 而不是 Y，因为 Z"
+# 这只是加速器。脚本坏了就按 AGENTS.md 手动做同样的事，不要绕过规则本身。
+
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ -z "$ROOT" ]; then echo "不在 git 仓库里。"; exit 1; fi
+STATE="$ROOT/.agent/STATE.md"
+DEC="$ROOT/.agent/DECISIONS.md"
+MAXLINES=60
+
+field() {
+  awk -v k="$1" '
+    NR==1 && $0=="---" { inb=1; next }
+    inb && $0=="---" { exit }
+    inb && index($0, k ":")==1 {
+      sub(/^[^:]*:[ \t]*/, ""); sub(/[ \t]+#.*$/, ""); print; exit
+    }' "$STATE"
+}
+
+cmd=$1
+who=$2
+
+case "$cmd" in
+  in)
+    echo "########## 1/5 当前状态 (.agent/STATE.md) ##########"
+    cat "$STATE"
+    echo
+    echo "########## 2/5 状态新鲜度 ##########"
+    head_sha=$(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null)
+    state_sha=$(git -C "$ROOT" log -1 --format=%h -- .agent/STATE.md 2>/dev/null)
+    state_age=$(git -C "$ROOT" log -1 --format=%cr -- .agent/STATE.md 2>/dev/null)
+    echo "HEAD:          ${head_sha:-（还没有提交）}"
+    echo "STATE 更新于:  ${state_sha:-（还没有被提交过）} ${state_age}"
+    if [ -n "$head_sha" ] && [ -n "$state_sha" ] && [ "$head_sha" != "$state_sha" ]; then
+      echo "!! 状态已过期：下面这些提交发生在 STATE.md 最后一次更新之后，其内容没有反映在状态里。"
+      echo "!! 以 git 实际情况为准，并在回复第一行告知我。"
+      git -C "$ROOT" log --oneline "$state_sha..HEAD"
+    else
+      echo "OK：状态与 HEAD 同步。"
+    fi
+    echo
+    echo "########## 3/5 工作区 ##########"
+    if [ -n "$(git -C "$ROOT" status --porcelain)" ]; then
+      echo "!! 工作区不干净。有人留下了未提交的改动，先搞清楚这些改动是什么、是否可信，再动手："
+      git -C "$ROOT" status --short
+    else
+      echo "OK：工作区干净。"
+    fi
+    echo
+    echo "########## 4/5 最近 5 次提交（含正文） ##########"
+    git -C "$ROOT" log -5 --date=short --format='--- %h %ad %s%n%b' 2>/dev/null
+    echo "########## 5/5 决策记录（最后 20 行） ##########"
+    tail -n 20 "$DEC"
+    echo
+    echo ">> 你是: ${who:-未声明}。验证命令: $(field verify)。建议接手者: $(field next)"
+    echo ">> 现在用不超过 5 行复述「现状 / 我要做什么 / 我不碰什么」，等确认再改代码。"
+    ;;
+
+  out)
+    if [ -z "$who" ]; then echo '用法: sh .agent/handoff out <codex|grok|cursor> "一句话说明"'; exit 1; fi
+    summary=$3
+    if [ -z "$summary" ]; then echo "缺少一句话说明。"; exit 1; fi
+    force=0
+    case "$*" in *--force*) force=1 ;; esac
+
+    state_tracked=0
+    git -C "$ROOT" ls-files --error-unmatch .agent/STATE.md >/dev/null 2>&1 && state_tracked=1
+    if [ "$state_tracked" = 1 ] && git -C "$ROOT" diff --quiet HEAD -- .agent/STATE.md 2>/dev/null; then
+      echo "拒绝交接：.agent/STATE.md 一点没改。先重写它（现状 / 下一步 / 试过但没成 / next），再重跑 out。"
+      exit 1
+    fi
+
+    n=$(awk 'END{print NR}' "$STATE")
+    if [ "$n" -gt "$MAXLINES" ]; then
+      echo "拒绝交接：STATE.md 有 $n 行，上限 $MAXLINES 行。删掉细节，只留现状、下一步、坑 —— 细节属于 commit 正文。"
+      exit 1
+    fi
+
+    if grep -q '（待填）' "$STATE"; then
+      echo "拒绝交接：STATE.md 里还有「（待填）」占位符。"
+      exit 1
+    fi
+
+    risky=$(git -C "$ROOT" status --porcelain | cut -c4- \
+      | grep -Ei '(^|/)\.env|\.pem$|\.p12$|id_rsa|credential|secret')
+    if [ -n "$risky" ]; then
+      echo "拒绝交接：下列文件像是密钥或凭据，out 会把它们提交进仓库。先加进 .gitignore 或删掉："
+      echo "$risky"
+      exit 1
+    fi
+
+    verify=$(field verify)
+    if [ -z "$verify" ] || [ "$verify" = "none" ]; then
+      vstatus="skipped（STATE.md 未设置 verify）"
+      echo "!! 本项目还没有验证命令。尽快在 STATE.md 的 verify 里填一条真能判定成败的命令。"
+    else
+      echo ">> 执行验证命令: $verify"
+      if sh -c "$verify"; then
+        vstatus="$verify -> pass"
+      elif [ "$force" = 1 ]; then
+        vstatus="$verify -> FAILED（强制交接）"
+        echo "!! 验证失败，按 --force 继续。确认你已经把失败原因写进 STATE.md 的「试过但没成」。"
+      else
+        echo "拒绝交接：验证命令失败。要么修好，要么把失败原因写进 STATE.md 的「试过但没成」后加 --force 重跑。"
+        exit 1
+      fi
+    fi
+
+    next=$(field next)
+    if [ -z "$next" ]; then next=any; fi
+
+    git -C "$ROOT" add -A
+    printf '%s\n\nVerified: %s\nNext: %s\nAgent: %s\n' \
+      "$summary" "$vstatus" "$next" "$who" | git -C "$ROOT" commit -q -F -
+    if [ $? -ne 0 ]; then echo "提交失败，看上面的 git 输出。"; exit 1; fi
+    echo "已提交 $(git -C "$ROOT" rev-parse --short HEAD)"
+    echo "交接完成。下一个工具应执行: sh .agent/handoff in $next"
+    ;;
+
+  decide)
+    line=$2
+    if [ -z "$line" ]; then echo '用法: sh .agent/handoff decide "选了 X 而不是 Y，因为 Z"'; exit 1; fi
+    printf -- '- %s · %s\n' "$(date +%Y-%m-%d)" "$line" >> "$DEC"
+    echo "已记入 .agent/DECISIONS.md（随下一次 out 一起提交）"
+    ;;
+
+  *)
+    echo "用法:"
+    echo "  sh .agent/handoff in  <codex|grok|cursor>"
+    echo '  sh .agent/handoff out <codex|grok|cursor> "一句话说明" [--force]'
+    echo '  sh .agent/handoff decide "选了 X 而不是 Y，因为 Z"'
+    exit 1
+    ;;
+esac

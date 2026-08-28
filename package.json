@@ -1,0 +1,66 @@
+{
+  "name": "aislemeal",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Local-first healthy meal planner and grocery list for Chinese home cooking. Tick pantry ingredients, plan meals to calorie/protein targets. No account, no backend.",
+  "license": "MIT",
+  "homepage": "https://github.com/bigu1/AisleMeal",
+  "bugs": {
+    "url": "https://github.com/bigu1/AisleMeal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigu1/AisleMeal.git"
+  },
+  "keywords": [
+    "meal-planner",
+    "meal-prep",
+    "grocery-list",
+    "nutrition",
+    "calorie",
+    "protein",
+    "chinese-recipes",
+    "healthy-eating",
+    "pwa",
+    "local-first",
+    "nextjs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "predev": "node scripts/build-data.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/build-data.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "build-data": "node scripts/build-data.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "lucide-react": "^0.544.0",
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/react": "^16.3.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "js-yaml": "^4.3.1",
+    "jsdom": "^26.1.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^3.2.7"
+  }
+}

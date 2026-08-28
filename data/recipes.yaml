@@ -1,0 +1,3967 @@
+# AisleMeal 食谱库 —— 完整一餐（1 人份，克数一律为生重/购买态）
+# 步骤为参考做法，发布前建议实做抽验（未验证）。编码阶段不得修改克数与步骤内容。
+# equipment 为所需设备（AND）；空数组 = 无需烹饪。
+
+recipes:
+  # ============ 早餐（8 道） ============
+  - id: oat-yogurt-cup
+    name: 燕麦酸奶能量杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: oats, grams: 40 }
+      - { id: greek-yogurt, grams: 150 }
+      - { id: banana, grams: 95 }
+    steps:
+      - 燕麦片 40g 倒入碗中，加希腊酸奶 150g 拌匀
+      - 香蕉 95g 切片铺在上面
+      - 直接吃（想更软可冷藏隔夜）
+    tags: [免开火, 快手, 高蛋白]
+
+  - id: pb-banana-toast
+    name: 花生酱香蕉吐司配牛奶
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: peanut-butter, grams: 15 }
+      - { id: banana, grams: 80 }
+      - { id: skim-milk, grams: 250 }
+    steps:
+      - 两片全麦面包各抹一层花生酱（共 15g）
+      - 香蕉切片夹进面包里
+      - 配一盒脱脂牛奶 250ml
+    tags: [免开火, 快手]
+
+  - id: protein-oat-shake
+    name: 蛋白粉燕麦香蕉奶昔
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: whey-protein, grams: 30 }
+      - { id: oats, grams: 30 }
+      - { id: skim-milk, grams: 250 }
+      - { id: banana, grams: 80 }
+    steps:
+      - 摇摇杯中倒入脱脂牛奶 250ml
+      - 加入蛋白粉 30g、即食燕麦 30g
+      - 香蕉掰小块放入，盖紧摇匀（有搅拌机更顺滑）
+    tags: [免开火, 快手, 高蛋白]
+
+  - id: microwave-egg-oatmeal
+    name: 微波鸡蛋牛奶燕麦粥
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 6
+    difficulty: 1
+    ingredients:
+      - { id: oats, grams: 40 }
+      - { id: egg, grams: 60 }
+      - { id: greek-yogurt, grams: 200 }
+    steps:
+      - 大碗中倒入燕麦 40g 和牛奶 200ml，微波高火 2 分钟
+      - 取出后立刻打入 1 个鸡蛋，快速搅散
+      - 再微波高火 1 分钟，拌匀即可
+    tags: [快手, 暖胃]
+
+  - id: microwave-steamed-egg-toast
+    name: 微波水蒸蛋配全麦吐司
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: scallion, grams: 5 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 2 个鸡蛋打散，加 180ml 温水和 1g 盐搅匀
+      - 盖上保鲜膜，用牙签扎几个小孔
+      - 微波中火（50%）加热 5 分钟至凝固
+      - 撒葱花，配两片全麦面包
+    tags: [高蛋白, 暖胃]
+
+  - id: tomato-egg-sandwich
+    name: 番茄炒蛋三明治
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: tomato, grams: 80 }
+      - { id: lettuce, grams: 20 }
+      - { id: olive-oil, grams: 3 }
+    steps:
+      - 番茄切小丁，2 个鸡蛋打散
+      - 锅中放 3g 橄榄油，倒入蛋液炒到半凝固
+      - 加番茄丁翻炒 1 分钟至软
+      - 夹进两片全麦面包，垫上生菜
+    tags: [快手, 经典]
+
+  - id: boiled-egg-oat-bowl
+    name: 水煮蛋燕麦牛奶碗
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: oats, grams: 40 }
+      - { id: skim-milk, grams: 250 }
+    steps:
+      - 鸡蛋冷水下锅，水开后煮 8 分钟捞出剥壳
+      - 燕麦 40g 加牛奶 250ml 泡 3 分钟（喜热可微波 1 分钟）
+      - 鸡蛋对半切开摆上即可
+    tags: [高蛋白, 极简]
+
+  - id: tuna-lettuce-sandwich
+    name: 金枪鱼生菜三明治
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 6
+    difficulty: 1
+    ingredients:
+      - { id: canned-tuna, grams: 70 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: lettuce, grams: 30 }
+      - { id: tomato, grams: 50 }
+      - { id: greek-yogurt, grams: 20 }
+    steps:
+      - 金枪鱼罐头沥干水分，加 20g 希腊酸奶拌成鱼酱（代替蛋黄酱，更低脂）
+      - 番茄切片，生菜洗净沥干
+      - 面包夹入生菜、番茄和金枪鱼酱
+    tags: [免开火, 高蛋白, 清爽]
+
+  - id: tomato-egg-yogurt-bowl
+    name: 番茄鸡蛋酸奶碗
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: tomato, grams: 80 }
+      - { id: greek-yogurt, grams: 150 }
+    steps:
+      - 鸡蛋炒熟，番茄切丁翻炒 1 分钟
+      - 盛出放凉，旁边摆希腊酸奶
+    tags: [快手, 高蛋白]
+
+  - id: banana-egg-oat-bowl
+    name: 香蕉鸡蛋燕麦碗
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 60 }
+      - { id: banana, grams: 95 }
+      - { id: oats, grams: 35 }
+      - { id: greek-yogurt, grams: 80 }
+    steps:
+      - 燕麦拌酸奶
+      - 鸡蛋可提前煮好对半，香蕉切片铺上
+    tags: [免开火, 高蛋白]
+
+  - id: broccoli-egg-yogurt
+    name: 西兰花鸡蛋酸奶早餐
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: broccoli, grams: 80 }
+      - { id: greek-yogurt, grams: 120 }
+      - { id: olive-oil, grams: 3 }
+    steps:
+      - 西兰花加少许水微波 3 分钟
+      - 鸡蛋打散微波 1 分钟至凝固，淋橄榄油
+      - 配希腊酸奶
+    tags: [快手, 有蔬菜]
+
+  # ============ 午餐 / 晚餐 ============
+  - id: airfryer-chicken-rice
+    name: 空气炸锅鸡胸能量餐
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: chicken-breast, grams: 150 }
+      - { id: brown-rice, grams: 60 }
+      - { id: broccoli, grams: 150 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 2 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 糙米 60g（生米）洗净，按 1:1.3 加水用电饭煲煮饭
+      - 鸡胸肉两面抹盐、黑胡椒和橄榄油，静置 10 分钟
+      - 放入空气炸锅 180°C 烤 12 分钟，中途翻面一次
+      - 西兰花掰小朵，最后 5 分钟放进炸锅一起烤
+      - 鸡胸切条，和饭、西兰花装盘
+    tags: [高蛋白, 减脂经典]
+
+  - id: ricecooker-chicken-mushroom-rice
+    name: 电饭煲鸡腿香菇焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-thigh, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: mushroom, grams: 50 }
+      - { id: carrot, grams: 50 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: ginger, grams: 3 }
+    steps:
+      - 鸡腿肉切块，用生抽 8g 和姜丝抓匀腌 10 分钟
+      - 大米 70g 洗净放电饭煲，正常煮饭水量
+      - 口蘑切片、胡萝卜切丁，和鸡腿一起平铺在米上
+      - 按正常煮饭键，跳闸后拌匀焖 5 分钟
+    tags: [一锅出, 零失败]
+
+  - id: garlic-shrimp-pasta
+    name: 蒜香虾仁西葫芦意面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: shrimp, grams: 150 }
+      - { id: wholewheat-pasta, grams: 70 }
+      - { id: zucchini, grams: 100 }
+      - { id: garlic, grams: 10 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 全麦意面 70g 下沸水煮 10 分钟，捞出备用
+      - 锅中放橄榄油 8g，小火爆香蒜末
+      - 加虾仁炒至变红，再加西葫芦片炒 2 分钟
+      - 倒入意面和 2 勺煮面水，加盐翻拌 1 分钟
+    tags: [高蛋白, 低脂]
+
+  - id: salmon-quinoa-bowl
+    name: 香煎三文鱼藜麦碗
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 30
+    difficulty: 2
+    ingredients:
+      - { id: salmon, grams: 120 }
+      - { id: quinoa, grams: 50 }
+      - { id: asparagus, grams: 100 }
+      - { id: bell-pepper, grams: 50 }
+      - { id: olive-oil, grams: 3 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 藜麦 50g 洗净，按 1:1.5 加水用电饭煲煮熟
+      - 三文鱼两面撒盐，静置 5 分钟
+      - 平底锅放 3g 油，三文鱼皮朝下中火煎 3 分钟，翻面再煎 2 分钟
+      - 芦笋和彩椒条用锅中余油煎 2 分钟
+      - 全部铺在藜麦上装碗
+    tags: [优质脂肪, 增肌]
+
+  - id: tomato-beef-rice
+    name: 番茄嫩牛肉盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: beef-tenderloin, grams: 100 }
+      - { id: tomato, grams: 150 }
+      - { id: white-rice, grams: 70 }
+      - { id: onion, grams: 30 }
+      - { id: olive-oil, grams: 5 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 大米 70g 电饭煲正常煮饭；牛里脊逆纹切薄片，用生抽抓匀腌 10 分钟
+      - 锅中放油，牛肉大火快炒 1 分钟至变色盛出
+      - 用余油把洋葱丝和番茄块炒出汁，加盐
+      - 牛肉回锅拌匀，整锅盖在米饭上
+    tags: [高蛋白, 下饭]
+
+  - id: microwave-cod-sweetpotato
+    name: 微波清蒸鳕鱼红薯餐
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: cod, grams: 150 }
+      - { id: sweet-potato, grams: 200 }
+      - { id: broccoli, grams: 100 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: ginger, grams: 3 }
+      - { id: sesame-oil, grams: 3 }
+    steps:
+      - 红薯洗净扎几个孔，微波高火 6 分钟至软
+      - 鳕鱼放深盘，铺姜丝，盖保鲜膜扎孔，微波高火 4 分钟
+      - 西兰花加 2 勺水盖膜，微波高火 3 分钟
+      - 鳕鱼淋生抽和香油，配红薯和西兰花
+    tags: [低脂, 快手, 一台微波炉搞定]
+
+  - id: pork-pepper-rice
+    name: 猪里脊炒彩椒盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: pork-loin, grams: 100 }
+      - { id: bell-pepper, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: garlic, grams: 5 }
+      - { id: olive-oil, grams: 5 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: cooking-wine, grams: 5 }
+    steps:
+      - 大米 70g 电饭煲煮饭；里脊切丝，用料酒和生抽腌 10 分钟
+      - 锅中放油爆香蒜片，肉丝大火炒 2 分钟至变色
+      - 加彩椒丝再炒 1 分钟，出锅盖饭
+    tags: [快手, 下饭]
+
+  - id: tomato-tofu-egg-soup-rice
+    name: 番茄豆腐蛋花汤配糙米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: broccoli, grams: 200 }
+      - { id: egg, grams: 60 }
+      - { id: tomato, grams: 150 }
+      - { id: brown-rice, grams: 60 }
+      - { id: olive-oil, grams: 3 }
+      - { id: salt, grams: 2 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 糙米 60g 电饭煲煮饭（水 1:1.3）
+      - 番茄切块下锅，加少许水煮出汁
+      - 豆腐切块入锅煮 3 分钟，加盐
+      - 淋入打散的蛋液搅出蛋花，关火滴香油撒葱花
+      - 汤配饭吃
+    tags: [清淡, 暖胃, 素食友好]
+
+  - id: airfryer-sweetpotato-chicken-salad
+    name: 空气炸锅红薯鸡胸沙拉
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: sweet-potato, grams: 150 }
+      - { id: lettuce, grams: 80 }
+      - { id: cucumber, grams: 50 }
+      - { id: olive-oil, grams: 5 }
+      - { id: black-pepper, grams: 1 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 红薯切 2cm 小块，鸡胸抹盐和黑胡椒
+      - 一起放空气炸锅 180°C 烤 15 分钟（红薯翻一次面）
+      - 生菜撕块、黄瓜切片垫底
+      - 鸡胸切条摆上，淋橄榄油拌匀
+    tags: [减脂经典, 无米饭]
+
+  - id: chicken-soba-cold-noodle
+    name: 鸡丝荞麦凉面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: chicken-breast, grams: 100 }
+      - { id: buckwheat-noodle, grams: 70 }
+      - { id: cucumber, grams: 80 }
+      - { id: sesame-oil, grams: 5 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸冷水下锅煮 12 分钟，捞出放凉后撕成丝
+      - 荞麦面煮 5 分钟，过两遍凉水沥干
+      - 黄瓜切丝，蒜切末
+      - 全部拌入生抽和香油
+    tags: [清爽, 夏日, 高蛋白]
+
+  - id: shrimp-egg-fried-rice
+    name: 虾仁鸡蛋糙米炒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: shrimp, grams: 100 }
+      - { id: egg, grams: 60 }
+      - { id: brown-rice, grams: 60 }
+      - { id: carrot, grams: 30 }
+      - { id: scallion, grams: 10 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 糙米 60g 提前用电饭煲煮熟晾凉（隔夜饭更佳）
+      - 锅中放一半油，炒散蛋液盛出
+      - 剩余油炒虾仁和胡萝卜丁 2 分钟
+      - 倒入米饭炒散，加盐、鸡蛋和葱花翻匀
+    tags: [一碗端, 下饭]
+
+  - id: ricecooker-salmon-veg-rice
+    name: 电饭煲三文鱼杂蔬焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: salmon, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: carrot, grams: 50 }
+      - { id: mushroom, grams: 50 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 大米 70g 洗净放电饭煲，正常水量
+      - 三文鱼切块、胡萝卜切丁、口蘑切片铺在米上
+      - 按煮饭键，跳闸后淋生抽拌匀焖 5 分钟
+    tags: [一锅出, 零失败, 优质脂肪]
+
+  - id: pepper-beef-asparagus-rice
+    name: 黑椒牛柳芦笋配米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: beef-tenderloin, grams: 120 }
+      - { id: asparagus, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: olive-oil, grams: 5 }
+      - { id: black-pepper, grams: 2 }
+      - { id: oyster-sauce, grams: 5 }
+      - { id: cooking-wine, grams: 5 }
+    steps:
+      - 大米 70g 电饭煲煮饭；牛柳切条用料酒和蚝油腌 10 分钟
+      - 芦笋切段焯水 1 分钟捞出
+      - 锅中放油，牛柳大火炒 1 分钟
+      - 加芦笋和现磨黑胡椒炒 30 秒出锅
+    tags: [高蛋白, 增肌]
+
+  - id: microwave-chicken-broccoli-box
+    name: 微波鸡胸西兰花玉米便当
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: broccoli, grams: 150 }
+      - { id: brown-rice, grams: 150 }
+      - { id: olive-oil, grams: 3 }
+      - { id: salt, grams: 2 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 鸡胸切 1cm 薄片，抹盐、黑胡椒和橄榄油
+      - 深盘铺鸡胸，盖保鲜膜扎孔，微波高火 4 分钟
+      - 西兰花和玉米段加 2 勺水，盖膜再微波 4 分钟
+      - 全部装盒即可（适合上班带饭）
+    tags: [带饭, 快手, 一台微波炉搞定]
+
+  - id: tofu-cabbage-rice
+    name: 蚝油豆腐娃娃菜配米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: baby-cabbage, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: garlic, grams: 5 }
+      - { id: olive-oil, grams: 5 }
+      - { id: oyster-sauce, grams: 8 }
+    steps:
+      - 大米 60g 电饭煲煮饭
+      - 豆腐切厚片，锅中放油煎至两面金黄
+      - 加蒜片、娃娃菜和蚝油，加 3 勺水焖 3 分钟
+      - 出锅配饭
+    tags: [清淡, 素食友好, 下饭]
+
+  - id: airfryer-chicken-thigh-corn
+    name: 空气炸锅鸡腿玉米餐
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-thigh, grams: 150 }
+      - { id: corn, grams: 200 }
+      - { id: cucumber, grams: 100 }
+      - { id: salt, grams: 2 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 去皮鸡腿肉抹盐和黑胡椒腌 10 分钟
+      - 和玉米段一起放空气炸锅 190°C 烤 15 分钟
+      - 黄瓜拍碎加少许盐拌成小凉菜
+    tags: [解馋, 无米饭, 快手]
+
+  - id: tuna-potato-salad
+    name: 金枪鱼土豆泥沙拉餐
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: canned-tuna, grams: 80 }
+      - { id: potato, grams: 250 }
+      - { id: cucumber, grams: 50 }
+      - { id: greek-yogurt, grams: 50 }
+      - { id: salt, grams: 1 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 土豆去皮切块，盖保鲜膜微波高火 6 分钟至软
+      - 压成泥，拌入希腊酸奶、盐和黑胡椒
+      - 金枪鱼沥干拌入，黄瓜丁点缀
+    tags: [免开火灶, 清爽, 带饭]
+
+  - id: microwave-shrimp-okra-egg
+    name: 虾仁秋葵蒸蛋配米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: shrimp, grams: 50 }
+      - { id: okra, grams: 50 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: sesame-oil, grams: 3 }
+    steps:
+      - 大米 60g 电饭煲煮饭
+      - 2 个鸡蛋加 180ml 温水打匀，放入虾仁和秋葵圈
+      - 盖保鲜膜扎孔，微波中火 6 分钟至凝固
+      - 淋生抽和香油，配饭吃
+    tags: [嫩滑, 高蛋白, 清淡]
+
+  - id: onion-pork-rice-bowl
+    name: 洋葱猪里脊盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: pork-loin, grams: 110 }
+      - { id: onion, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: olive-oil, grams: 5 }
+      - { id: cooking-wine, grams: 5 }
+    steps:
+      - 大米 70g 电饭煲煮饭；里脊切薄片用料酒腌 10 分钟
+      - 锅中放油，洋葱丝中火炒软炒出甜味
+      - 加肉片炒 2 分钟至变色，淋生抽
+      - 连汁盖在饭上
+    tags: [日式风, 下饭]
+
+  - id: spinach-garlic-egg-toast
+    name: 菠菜蒜蓉炒蛋配吐司
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: spinach, grams: 150 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: garlic, grams: 5 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 菠菜焯水 30 秒捞出挤干（去草酸），切段
+      - 锅中放油炒散蛋液，盛出
+      - 余油爆香蒜末，菠菜回锅加盐，混入鸡蛋
+      - 配两片烤过的全麦面包
+    tags: [快手, 清淡]
+
+  - id: ricecooker-quinoa-chicken-rice
+    name: 电饭煲藜麦鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: quinoa, grams: 60 }
+      - { id: carrot, grams: 50 }
+      - { id: onion, grams: 30 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 藜麦 60g 洗净放电饭煲，按 1:1.5 加水
+      - 鸡胸切丁抹盐，和胡萝卜丁、洋葱丁铺在藜麦上
+      - 按煮饭键，跳闸后拌匀焖 5 分钟
+    tags: [一锅出, 高蛋白, 零失败]
+
+  - id: pan-cod-potato-asparagus
+    name: 香煎鳕鱼土豆芦笋餐
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: cod, grams: 150 }
+      - { id: potato, grams: 200 }
+      - { id: asparagus, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 2 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 土豆切 1cm 厚片，加水煮 8 分钟至软捞出
+      - 鳕鱼两面抹盐和黑胡椒，用厨房纸吸干水
+      - 锅中放油，鳕鱼中火每面煎 3 分钟至金黄
+      - 用余油把土豆片和芦笋煎上色
+    tags: [低脂, 高蛋白, 西式]
+
+  # ============ 扩展菜谱 ============
+  - id: cherry-tomato-egg-toast
+    name: 圣女果鸡蛋吐司
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: wholewheat-bread, grams: 70 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 鸡蛋打散加盐
+      - 圣女果对半切开
+      - 平底锅摊成蛋饼，夹进吐司，放上圣女果
+    tags: [快手, 高蛋白]
+
+  - id: whole-milk-banana-toast
+    name: 香蕉纯牛奶吐司
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: whole-milk, grams: 250 }
+      - { id: banana, grams: 80 }
+      - { id: wholewheat-bread, grams: 80 }
+    steps:
+      - 香蕉切片铺在吐司上
+      - 配一杯纯牛奶
+    tags: [免开火, 快手]
+
+  - id: cheese-egg-toast
+    name: 芝士鸡蛋吐司
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: cheese-slice, grams: 40 }
+      - { id: egg, grams: 60 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 鸡蛋加盐炒熟
+      - 吐司上放芝士片和炒蛋
+    tags: [快手]
+
+  - id: steamed-bun-egg
+    name: 馒头配水煮蛋
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: steamed-bun, grams: 100 }
+      - { id: egg, grams: 60 }
+    steps:
+      - 鸡蛋冷水下锅煮 8 分钟
+      - 馒头蒸热或微波 30 秒，配蛋
+    tags: [极简]
+
+  - id: pancake-egg-wrap
+    name: 手抓饼鸡蛋卷
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: hand-grab-pancake, grams: 100 }
+      - { id: egg, grams: 60 }
+      - { id: cilantro, grams: 5 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 手抓饼小火烙至金黄
+      - 摊一张鸡蛋，撒香菜和盐
+      - 卷进饼里
+    tags: [快手]
+
+  - id: pumpkin-egg-cup
+    name: 贝贝南瓜蒸蛋
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: baby-pumpkin, grams: 150 }
+      - { id: egg, grams: 120 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 南瓜切块微波 5 分钟至软
+      - 鸡蛋加盐和水打匀，微波中火 4 分钟
+      - 南瓜压泥拌蛋
+    tags: [暖胃]
+
+  - id: mango-yogurt-cup
+    name: 芒果酸奶杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: mango, grams: 120 }
+      - { id: greek-yogurt, grams: 150 }
+      - { id: oats, grams: 20 }
+    steps:
+      - 芒果切丁
+      - 酸奶拌燕麦，铺上芒果
+    tags: [免开火]
+
+  - id: black-rice-milk-porridge
+    name: 黑米牛奶粥
+    mealSlots: [breakfast]
+    equipment: [ricecooker]
+    timeMinutes: 40
+    difficulty: 1
+    ingredients:
+      - { id: black-rice, grams: 40 }
+      - { id: whole-milk, grams: 200 }
+    steps:
+      - 黑米洗净放电饭煲
+      - 加牛奶和水煮至软糯
+    tags: [暖胃]
+
+  - id: fresh-noodle-egg-soup
+    name: 鲜面鸡蛋汤
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: fresh-noodle, grams: 120 }
+      - { id: egg, grams: 60 }
+      - { id: scallion, grams: 5 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 水开下面，煮 2 分钟
+      - 打入鸡蛋成蛋花，加盐葱花
+    tags: [快手]
+
+  - id: wonton-breakfast
+    name: 小馄饨早餐
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: wonton, grams: 150 }
+      - { id: scallion, grams: 5 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 馄饨下沸水煮至浮起
+      - 碗中放生抽葱花，连汤盛出
+    tags: [快手]
+
+  - id: rice-cake-egg-pan
+    name: 年糕煎蛋
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: rice-cake, grams: 120 }
+      - { id: egg, grams: 60 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 年糕加少许水炒软
+      - 倒入蛋液，淋生抽翻匀
+    tags: [快手]
+
+  - id: pineapple-yogurt
+    name: 菠萝酸奶杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: pineapple, grams: 180 }
+      - { id: greek-yogurt, grams: 200 }
+    steps:
+      - 菠萝切丁沥水
+      - 拌入希腊酸奶
+    tags: [免开火, 清爽]
+
+  - id: mozzarella-tomato-toast
+    name: 马苏里拉番茄吐司
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 6
+    difficulty: 1
+    ingredients:
+      - { id: mozzarella, grams: 40 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: wholewheat-bread, grams: 80 }
+    steps:
+      - 吐司铺奶酪和圣女果
+      - 微波 40 秒至奶酪融化
+    tags: [快手]
+
+  - id: dragon-fruit-yogurt
+    name: 火龙果酸奶碗
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: dragon-fruit, grams: 180 }
+      - { id: greek-yogurt, grams: 200 }
+    steps:
+      - 火龙果挖球或切丁
+      - 铺在酸奶上
+    tags: [免开火]
+
+  - id: nectarine-oat-yogurt
+    name: 油桃燕麦酸奶
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: nectarine, grams: 120 }
+      - { id: oats, grams: 30 }
+      - { id: greek-yogurt, grams: 150 }
+    steps:
+      - 油桃切片
+      - 酸奶拌燕麦后铺上
+    tags: [免开火]
+
+  - id: orange-yogurt-bowl
+    name: 橙子酸奶碗
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: orange, grams: 150 }
+      - { id: greek-yogurt, grams: 150 }
+      - { id: oats, grams: 20 }
+    steps:
+      - 橙子去皮分瓣
+      - 酸奶拌燕麦，摆上橙子
+    tags: [免开火]
+
+  - id: hami-melon-yogurt
+    name: 蜜瓜酸奶杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: hami-melon, grams: 200 }
+      - { id: greek-yogurt, grams: 200 }
+      - { id: oats, grams: 20 }
+    steps:
+      - 蜜瓜切块
+      - 酸奶拌燕麦，铺上蜜瓜
+    tags: [免开火, 清爽]
+
+  - id: lychee-yogurt-cup
+    name: 荔枝酸奶杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: lychee, grams: 150 }
+      - { id: greek-yogurt, grams: 200 }
+    steps:
+      - 荔枝去核
+      - 拌入酸奶
+    tags: [免开火]
+
+  - id: watermelon-yogurt
+    name: 西瓜酸奶杯
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 5
+    difficulty: 1
+    ingredients:
+      - { id: watermelon, grams: 220 }
+      - { id: greek-yogurt, grams: 200 }
+      - { id: oats, grams: 20 }
+    steps:
+      - 西瓜切丁沥水
+      - 酸奶拌燕麦后铺上
+    tags: [免开火]
+
+  - id: tomato-broccoli-egg-breakfast
+    name: 番茄西兰花炒蛋
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 10
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: tomato, grams: 120 }
+      - { id: broccoli, grams: 100 }
+      - { id: olive-oil, grams: 6 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 西兰花掰小朵焯水，番茄切块，鸡蛋打散
+      - 锅中放油炒蛋至半熟盛出
+      - 下番茄和西兰花炒软，倒回鸡蛋加盐翻匀
+    tags: [快手, 有蔬菜]
+
+  - id: milk-banana-egg-toast
+    name: 纯牛奶香蕉鸡蛋吐司
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 60 }
+      - { id: banana, grams: 80 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: whole-milk, grams: 250 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 鸡蛋加盐炒熟
+      - 吐司夹炒蛋，香蕉切片摆上
+      - 配一杯纯牛奶
+    tags: [快手, 高蛋白]
+
+  - id: garlic-chicken-broccoli-rice
+    name: 蒜蓉鸡胸西兰花饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: brown-rice, grams: 50 }
+      - { id: broccoli, grams: 130 }
+      - { id: tomato, grams: 80 }
+      - { id: garlic, grams: 8 }
+      - { id: soy-sauce, grams: 6 }
+    steps:
+      - 糙米煮饭
+      - 爆香蒜末，下鸡胸炒至变色
+      - 加西兰花、番茄和生抽炒熟盖饭
+    tags: [高蛋白]
+
+  - id: tomato-chicken-rice
+    name: 番茄鸡胸糙米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: brown-rice, grams: 50 }
+      - { id: tomato, grams: 150 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 糙米煮饭
+      - 鸡胸炒变色，加番茄块煮出汁
+      - 淋生抽撒葱花盖饭
+    tags: [高蛋白]
+
+  - id: tomato-broccoli-chicken-rice
+    name: 番茄西兰花鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 110 }
+      - { id: brown-rice, grams: 50 }
+      - { id: broccoli, grams: 100 }
+      - { id: tomato, grams: 100 }
+      - { id: salt, grams: 2 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 糙米煮饭
+      - 蒜末爆香，下鸡胸、番茄和西兰花
+      - 加盐炒熟配饭
+    tags: [高蛋白, 有蔬菜]
+
+  - id: chicken-tomato-broccoli-stir
+    name: 番茄西兰花炒鸡胸
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: tomato, grams: 120 }
+      - { id: broccoli, grams: 150 }
+      - { id: garlic, grams: 6 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 鸡胸切片，西兰花掰小朵
+      - 蒜末爆香下鸡胸，加番茄炒出汁
+      - 下西兰花和生抽炒熟
+    tags: [快手, 高蛋白, 无米饭]
+
+  - id: tomato-broccoli-rice-bowl
+    name: 番茄西兰花糙米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: brown-rice, grams: 60 }
+      - { id: tomato, grams: 150 }
+      - { id: broccoli, grams: 180 }
+      - { id: soy-sauce, grams: 6 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 糙米煮饭
+      - 蒜末爆香，番茄炒汁
+      - 下西兰花和生抽，配饭
+    tags: [清淡, 有蔬菜]
+
+  - id: luncheon-meat-broccoli-rice
+    name: 午餐肉西兰花炒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: luncheon-meat, grams: 80 }
+      - { id: brown-rice, grams: 60 }
+      - { id: broccoli, grams: 80 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 糙米煮熟晾凉
+      - 午餐肉切片炒出油
+      - 加西兰花和米饭，淋生抽炒匀
+    tags: [下饭]
+
+  - id: sausage-rice-bowl
+    name: 烤肠蔬菜盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: grilled-sausage, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: broccoli, grams: 80 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 烤肠切片煎香
+      - 西兰花焯水，淋生抽盖饭
+    tags: [下饭]
+
+  - id: chicken-feet-rice
+    name: 姜葱鸡爪配米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 35
+    difficulty: 2
+    ingredients:
+      - { id: chicken-feet, grams: 150 }
+      - { id: white-rice, grams: 70 }
+      - { id: ginger, grams: 10 }
+      - { id: scallion, grams: 10 }
+      - { id: soy-sauce, grams: 10 }
+    steps:
+      - 鸡爪剪甲焯水
+      - 姜葱爆香下鸡爪焖 15 分钟
+      - 淋生抽配饭
+    tags: [下饭]
+
+  - id: eggplant-pork-rice
+    name: 肉末茄子盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 80 }
+      - { id: eggplant, grams: 200 }
+      - { id: white-rice, grams: 70 }
+      - { id: garlic, grams: 8 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 茄子切条，肉丝和蒜末下锅
+      - 加生抽炒软盖饭
+    tags: [下饭]
+
+  - id: shiitake-chicken-rice
+    name: 香菇鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: shiitake, grams: 80 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: ginger, grams: 5 }
+    steps:
+      - 米洗净放电饭煲
+      - 鸡胸丁和香菇铺上，淋生抽
+      - 煮饭跳闸后拌匀
+    tags: [一锅出]
+
+  - id: crayfish-rice
+    name: 小龙虾盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: crayfish, grams: 200 }
+      - { id: white-rice, grams: 70 }
+      - { id: crayfish-spice, grams: 20 }
+      - { id: garlic, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 蒜末爆香，下小龙虾和调味料炒熟
+      - 盖饭
+    tags: [解馋]
+
+  - id: lamb-cumin-rice
+    name: 孜然羊肉盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: lamb, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: onion, grams: 80 }
+      - { id: cumin-powder, grams: 3 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 米饭煮好
+      - 羊肉洋葱大火炒
+      - 撒孜然和盐盖饭
+    tags: [下饭]
+
+  - id: pork-ribs-rice
+    name: 排骨土豆焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 1
+    ingredients:
+      - { id: pork-ribs, grams: 120 }
+      - { id: potato, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 10 }
+      - { id: ginger, grams: 5 }
+    steps:
+      - 排骨焯水
+      - 米、排骨、土豆块放电饭煲淋生抽
+      - 煮饭至熟
+    tags: [一锅出]
+
+  - id: smoked-tofu-cabbage-rice
+    name: 香干娃娃菜饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: smoked-tofu, grams: 120 }
+      - { id: baby-cabbage, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 香干切片和蒜炒香
+      - 下娃娃菜和生抽炒软配饭
+    tags: [素食友好]
+
+  - id: silken-tofu-tomato-rice
+    name: 绢豆腐番茄汤饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: silken-tofu, grams: 200 }
+      - { id: tomato, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: egg, grams: 60 }
+      - { id: salt, grams: 2 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 番茄煮汁，下绢豆腐
+      - 淋蛋花加盐葱花配饭
+    tags: [清淡]
+
+  - id: grouper-steamed-rice
+    name: 清蒸东星斑配米饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 30
+    difficulty: 2
+    ingredients:
+      - { id: grouper, grams: 180 }
+      - { id: white-rice, grams: 70 }
+      - { id: steamed-fish-soy, grams: 10 }
+      - { id: ginger, grams: 8 }
+      - { id: scallion, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 鱼铺姜丝蒸 8 分钟
+      - 淋蒸鱼豉油撒葱花配饭
+    tags: [清淡, 高蛋白]
+
+  - id: mussels-noodle
+    name: 青口贝鲜面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: mussels, grams: 200 }
+      - { id: fresh-noodle, grams: 150 }
+      - { id: garlic, grams: 8 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 蒜末爆香下青口贝至开口
+      - 下面条煮熟，淋生抽拌匀
+    tags: [海鲜]
+
+  - id: durum-tomato-shrimp-pasta
+    name: 杜兰番茄虾仁意面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: white-shrimp, grams: 120 }
+      - { id: durum-pasta, grams: 70 }
+      - { id: tomato, grams: 120 }
+      - { id: garlic, grams: 8 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 意面煮 10 分钟
+      - 油爆蒜，下虾仁和番茄
+      - 拌面加盐
+    tags: [高蛋白]
+
+  - id: river-shrimp-egg-rice
+    name: 河虾鸡蛋炒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: river-shrimp, grams: 100 }
+      - { id: egg, grams: 60 }
+      - { id: white-rice, grams: 70 }
+      - { id: scallion, grams: 8 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 米饭晾凉
+      - 炒蛋盛出，下河虾
+      - 加饭葱花盐炒匀
+    tags: [下饭]
+
+  - id: pigeon-rice
+    name: 姜葱乳鸽焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 2
+    ingredients:
+      - { id: pigeon, grams: 150 }
+      - { id: white-rice, grams: 70 }
+      - { id: ginger, grams: 8 }
+      - { id: scallion, grams: 8 }
+      - { id: soy-sauce, grams: 10 }
+    steps:
+      - 乳鸽切块腌生抽
+      - 米上铺鸽子和姜葱
+      - 电饭煲煮熟拌匀
+    tags: [一锅出]
+
+  - id: duck-gizzard-rice
+    name: 鸭胗青椒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: duck-gizzard, grams: 120 }
+      - { id: thin-chili, grams: 80 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸭胗切片焯水
+      - 蒜和青椒下锅，加鸭胗生抽炒熟配饭
+    tags: [下饭]
+
+  - id: taro-chicken-rice
+    name: 芋头鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 110 }
+      - { id: taro, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: ginger, grams: 5 }
+    steps:
+      - 芋头切块
+      - 米、鸡胸丁、芋头放电饭煲淋生抽
+      - 煮熟拌匀
+    tags: [一锅出]
+
+  - id: purple-potato-chicken
+    name: 紫薯空气炸鸡胸
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: purple-sweet-potato, grams: 180 }
+      - { id: broccoli, grams: 80 }
+      - { id: salt, grams: 2 }
+      - { id: black-pepper, grams: 1 }
+    steps:
+      - 紫薯切块，鸡胸抹盐胡椒
+      - 空气炸锅 180°C 18 分钟
+      - 西兰花最后 5 分钟放入
+    tags: [减脂]
+
+  - id: pumpkin-chicken-rice
+    name: 贝贝南瓜鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: baby-pumpkin, grams: 180 }
+      - { id: white-rice, grams: 50 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 南瓜切块
+      - 米和鸡胸南瓜放电饭煲
+      - 煮熟加盐拌匀
+    tags: [一锅出]
+
+  - id: red-cabbage-chicken-rice
+    name: 紫甘蓝鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: red-cabbage, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: rice-vinegar, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 鸡胸炒熟，紫甘蓝快炒
+      - 淋生抽和醋盖饭
+    tags: [高蛋白]
+
+  - id: kimchi-pork-rice
+    name: 泡菜肉丝盖饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 80 }
+      - { id: kimchi, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 肉丝炒变色，下泡菜翻炒
+      - 淋生抽盖饭
+    tags: [下饭]
+
+  - id: celery-pork-rice
+    name: 西芹肉丝饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 90 }
+      - { id: celery, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 肉丝蒜末下锅，加西芹
+      - 淋生抽炒熟配饭
+    tags: [快手]
+
+  - id: snap-pea-shrimp-rice
+    name: 甜豆虾仁饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: white-shrimp, grams: 120 }
+      - { id: snap-pea, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: salt, grams: 2 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 蒜末爆香下虾仁和甜豆
+      - 加盐炒熟配饭
+    tags: [高蛋白]
+
+  - id: thin-chili-pork-rice
+    name: 青椒肉丝饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 90 }
+      - { id: thin-chili, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: cooking-wine, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 肉丝用料酒腌，下锅加青椒
+      - 淋生抽盖饭
+    tags: [经典, 下饭]
+
+  - id: green-pea-egg-rice
+    name: 豌豆粒鸡蛋炒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: green-pea, grams: 80 }
+      - { id: white-rice, grams: 70 }
+      - { id: salt, grams: 2 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 米饭晾凉
+      - 炒蛋，下豌豆和饭
+      - 加盐葱花炒匀
+    tags: [快手]
+
+  - id: wood-ear-pork-rice
+    name: 木耳肉丝饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 80 }
+      - { id: wood-ear, grams: 40 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 木耳泡发切丝
+      - 米饭煮好，肉丝蒜末木耳同炒淋生抽
+    tags: [下饭]
+
+  - id: basil-chicken-rice
+    name: 罗勒鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: basil, grams: 15 }
+      - { id: white-rice, grams: 70 }
+      - { id: garlic, grams: 8 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 蒜末鸡胸炒熟
+      - 关火拌入罗勒和生抽盖饭
+    tags: [高蛋白]
+
+  - id: egg-noodle-chicken
+    name: 鸡蛋面鸡丝
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 100 }
+      - { id: egg-noodle, grams: 70 }
+      - { id: cucumber, grams: 80 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: sesame-oil, grams: 3 }
+    steps:
+      - 鸡胸煮熟撕丝
+      - 鸡蛋面煮熟过凉
+      - 黄瓜丝和鸡丝拌生抽香油
+    tags: [清爽]
+
+  - id: fresh-noodle-pork
+    name: 鲜面肉丝汤
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: pork-shred, grams: 80 }
+      - { id: fresh-noodle, grams: 150 }
+      - { id: baby-cabbage, grams: 80 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 肉丝焯水
+      - 下面和娃娃菜
+      - 加生抽葱花
+    tags: [快手]
+
+  - id: rice-cake-pork
+    name: 年糕肉丝
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 70 }
+      - { id: rice-cake, grams: 150 }
+      - { id: baby-cabbage, grams: 80 }
+      - { id: soy-sauce, grams: 10 }
+    steps:
+      - 年糕加水炒软
+      - 下肉丝和娃娃菜
+      - 淋生抽炒匀
+    tags: [下饭]
+
+  - id: black-rice-chicken
+    name: 黑米鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: black-rice, grams: 60 }
+      - { id: carrot, grams: 50 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 黑米洗净
+      - 铺鸡胸丁胡萝卜，电饭煲煮熟加盐拌
+    tags: [一锅出, 高蛋白]
+
+  - id: job-tears-chicken
+    name: 薏仁鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: job-tears, grams: 50 }
+      - { id: carrot, grams: 50 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 薏仁米洗净
+      - 铺鸡胸胡萝卜煮饭
+      - 加盐拌匀
+    tags: [一锅出]
+
+  - id: glutinous-chicken-rice
+    name: 糯米鸡胸焖饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 110 }
+      - { id: glutinous-rice, grams: 60 }
+      - { id: shiitake, grams: 50 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 糯米浸泡 20 分钟
+      - 铺鸡胸香菇淋生抽煮饭
+    tags: [一锅出]
+
+  - id: mung-vermicelli-chicken
+    name: 粉丝鸡胸汤
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 100 }
+      - { id: mung-vermicelli, grams: 40 }
+      - { id: baby-cabbage, grams: 100 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: ginger, grams: 5 }
+    steps:
+      - 粉丝泡软
+      - 鸡胸片和姜煮汤
+      - 下粉丝娃娃菜淋生抽
+    tags: [清淡]
+
+  - id: wonton-dinner-soup
+    name: 三鲜馄饨晚餐
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: wonton, grams: 200 }
+      - { id: baby-cabbage, grams: 80 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 馄饨下锅煮浮
+      - 下娃娃菜
+      - 碗中生抽葱花连汤盛
+    tags: [快手]
+
+  - id: steamed-bun-pork
+    name: 馒头夹肉丝
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: pork-shred, grams: 80 }
+      - { id: steamed-bun, grams: 120 }
+      - { id: thin-chili, grams: 50 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 肉丝青椒炒熟淋生抽
+      - 馒头切开夹入
+    tags: [快手]
+
+  - id: mozzarella-chicken-salad
+    name: 奶酪鸡胸沙拉
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: mozzarella, grams: 30 }
+      - { id: lettuce, grams: 80 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 1 }
+    steps:
+      - 鸡胸抹盐空气炸 12 分钟
+      - 生菜圣女果垫底，摆鸡胸和奶酪淋油
+    tags: [减脂]
+
+  - id: lamb-onion-rice
+    name: 洋葱羊肉饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: lamb, grams: 110 }
+      - { id: onion, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: cumin-powder, grams: 2 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 羊肉洋葱炒香
+      - 撒孜然淋生抽盖饭
+    tags: [下饭]
+
+  - id: ice-shrimp-egg-rice
+    name: 冰鲜河虾蒸蛋饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: ice-fresh-shrimp, grams: 80 }
+      - { id: egg, grams: 120 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 5 }
+      - { id: sesame-oil, grams: 3 }
+    steps:
+      - 米饭煮好
+      - 蛋液加虾微波 6 分钟
+      - 淋生抽香油配饭
+    tags: [嫩滑]
+
+  - id: pork-belly-rice
+    name: 五花肉洋葱饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 2
+    ingredients:
+      - { id: pork-belly, grams: 80 }
+      - { id: onion, grams: 100 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 五花肉煸出油，下洋葱
+      - 淋生抽盖饭
+    tags: [解馋]
+
+  - id: chinese-celery-tofu-rice
+    name: 芹菜香干饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: smoked-tofu, grams: 100 }
+      - { id: chinese-celery, grams: 120 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 香干芹菜同炒淋生抽配饭
+    tags: [素食友好]
+
+  - id: mini-cucumber-chicken
+    name: 拍黄瓜鸡胸餐
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: mini-cucumber, grams: 150 }
+      - { id: garlic, grams: 8 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: rice-vinegar, grams: 5 }
+    steps:
+      - 鸡胸煮熟切条
+      - 小黄瓜拍碎加蒜末生抽醋
+      - 配鸡胸
+    tags: [清爽, 高蛋白]
+
+  - id: bird-chili-pork-rice
+    name: 小米椒肉丝饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 90 }
+      - { id: bird-chili, grams: 20 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 蒜和辣椒爆香下肉丝
+      - 淋生抽盖饭
+    tags: [下饭]
+
+  - id: shiitake-egg-rice
+    name: 香菇滑蛋饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: shiitake, grams: 80 }
+      - { id: white-rice, grams: 70 }
+      - { id: soy-sauce, grams: 6 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 香菇炒软，倒蛋液
+      - 淋生抽撒葱花盖饭
+    tags: [快手]
+
+  - id: soft-tofu-eggplant-rice
+    name: 嫩豆腐茄子饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: soft-tofu, grams: 200 }
+      - { id: eggplant, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 8 }
+    steps:
+      - 米饭煮好
+      - 茄子炒软，下嫩豆腐和蒜
+      - 淋生抽配饭
+    tags: [素食友好]
+
+  - id: arctic-shrimp-rice
+    name: 北极甜虾沙拉饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: arctic-sweet-shrimp, grams: 120 }
+      - { id: white-rice, grams: 60 }
+      - { id: cucumber, grams: 80 }
+      - { id: lettuce, grams: 40 }
+    steps:
+      - 米饭煮好放凉
+      - 甜虾解冻，黄瓜生菜切好铺上
+    tags: [免开火灶, 清爽]
+
+  - id: golden-egg-spinach-rice
+    name: 黄天鹅鸡蛋菠菜饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: golden-goose-egg, grams: 120 }
+      - { id: spinach, grams: 150 }
+      - { id: white-rice, grams: 60 }
+      - { id: salt, grams: 2 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 蒜末炒蛋，下菠菜加盐
+      - 配饭
+    tags: [快手]
+
+  - id: adzuki-chicken-bowl
+    name: 红豆鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 50
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 110 }
+      - { id: adzuki-bean, grams: 40 }
+      - { id: white-rice, grams: 50 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 红豆和米洗净
+      - 铺鸡胸煮饭加盐拌
+    tags: [一锅出]
+
+  - id: mung-bean-egg-rice
+    name: 绿豆鸡蛋汤饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 40
+    difficulty: 1
+    ingredients:
+      - { id: mung-bean, grams: 40 }
+      - { id: egg, grams: 60 }
+      - { id: white-rice, grams: 60 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 绿豆煮软
+      - 米饭另煮，汤里打蛋花加盐配饭
+    tags: [清淡]
+
+  - id: teriyaki-chicken-rice
+    name: 照烧鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 70 }
+      - { id: broccoli, grams: 100 }
+      - { id: teriyaki-sauce, grams: 15 }
+    steps:
+      - 米饭煮好
+      - 鸡胸煎至上色，淋照烧汁
+      - 西兰花焯水配饭
+    tags: [高蛋白]
+
+  - id: gochujang-chicken-rice
+    name: 韩式辣酱鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 25
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: onion, grams: 60 }
+      - { id: gochujang, grams: 12 }
+    steps:
+      - 米饭煮好
+      - 鸡胸洋葱炒熟
+      - 拌韩式辣酱盖饭
+    tags: [下饭]
+
+  - id: sweet-bean-pork-rice
+    name: 京酱肉丝饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 2
+    ingredients:
+      - { id: pork-shred, grams: 90 }
+      - { id: white-rice, grams: 70 }
+      - { id: cucumber, grams: 80 }
+      - { id: sweet-bean-sauce, grams: 12 }
+      - { id: scallion, grams: 10 }
+    steps:
+      - 米饭煮好
+      - 肉丝炒熟拌甜面酱
+      - 黄瓜丝葱丝垫底盖饭
+    tags: [经典]
+
+  - id: fish-sauce-shrimp-rice
+    name: 鱼露虾仁饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: white-shrimp, grams: 130 }
+      - { id: white-rice, grams: 70 }
+      - { id: broccoli, grams: 100 }
+      - { id: fish-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 米饭煮好
+      - 蒜末虾仁快炒
+      - 淋鱼露，西兰花焯水配饭
+    tags: [高蛋白]
+
+  - id: laoganma-egg-rice
+    name: 老干妈鸡蛋炒饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: cucumber, grams: 50 }
+      - { id: laoganma, grams: 10 }
+    steps:
+      - 米饭晾凉
+      - 炒蛋，下饭和黄瓜丁
+      - 拌老干妈
+    tags: [下饭]
+
+  - id: chili-oil-noodle
+    name: 红油鲜面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: fresh-noodle, grams: 160 }
+      - { id: cucumber, grams: 60 }
+      - { id: chili-oil, grams: 8 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 面条煮熟过凉
+      - 蒜末生抽辣椒油拌面
+      - 铺黄瓜丝
+    tags: [快手]
+
+  - id: peanut-chicken-salad
+    name: 花生米鸡胸沙拉
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: peanut-kernel, grams: 15 }
+      - { id: lettuce, grams: 80 }
+      - { id: cucumber, grams: 60 }
+      - { id: soy-sauce, grams: 5 }
+    steps:
+      - 鸡胸煮熟切条
+      - 生菜黄瓜垫底，撒花生米淋生抽
+    tags: [高蛋白]
+
+  - id: sesame-spinach-chicken
+    name: 芝麻菠菜鸡胸
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: spinach, grams: 150 }
+      - { id: white-sesame, grams: 8 }
+      - { id: soy-sauce, grams: 6 }
+      - { id: sesame-oil, grams: 3 }
+    steps:
+      - 鸡胸煮熟
+      - 菠菜焯水挤干，拌芝麻生抽香油，配鸡胸
+    tags: [清淡]
+
+  - id: coconut-chicken-rice
+    name: 椰浆鸡胸饭
+    mealSlots: [lunch, dinner]
+    equipment: [ricecooker]
+    timeMinutes: 45
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 120 }
+      - { id: white-rice, grams: 60 }
+      - { id: coconut-milk, grams: 80 }
+      - { id: carrot, grams: 40 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 米加椰浆和水
+      - 铺鸡胸胡萝卜煮饭
+      - 加盐拌匀
+    tags: [一锅出]
+
+  - id: lemon-shrimp-rice
+    name: 柠檬虾仁饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: white-shrimp, grams: 130 }
+      - { id: white-rice, grams: 70 }
+      - { id: broccoli, grams: 80 }
+      - { id: lemon, grams: 30 }
+      - { id: olive-oil, grams: 4 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 米饭煮好
+      - 油煎虾仁，挤柠檬汁加盐
+      - 西兰花配饭
+    tags: [清爽, 高蛋白]
+
+  - id: nori-egg-rice
+    name: 海苔碎鸡蛋拌饭
+    mealSlots: [lunch, dinner]
+    equipment: [stove, ricecooker]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: white-rice, grams: 70 }
+      - { id: nori-flakes, grams: 8 }
+      - { id: soy-sauce, grams: 6 }
+    steps:
+      - 米饭煮好
+      - 鸡蛋炒熟铺上
+      - 撒海苔碎淋生抽
+    tags: [快手]
+
+  - id: raisin-oat-chicken
+    name: 葡萄干燕麦鸡胸
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 20
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: oats, grams: 30 }
+      - { id: raisins, grams: 15 }
+      - { id: lettuce, grams: 60 }
+      - { id: salt, grams: 2 }
+    steps:
+      - 鸡胸抹盐空气炸 12 分钟
+      - 燕麦葡萄干拌生菜，摆上鸡胸
+    tags: [减脂]
+
+  # ============ 0.3 扩菜 ============
+  - id: mw-egg-bun-tomato
+    name: 微波番茄蛋配馒头
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: steamed-bun, grams: 80 }
+      - { id: tomato, grams: 80 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-egg-corn-spinach
+    name: 微波菠菜玉米鸡蛋杯
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: corn, grams: 120 }
+      - { id: spinach, grams: 80 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-egg-potato-scallion
+    name: 微波土豆鸡蛋早餐
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: potato, grams: 150 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-egg-pumpkin-cup
+    name: 微波南瓜鸡蛋杯
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: baby-pumpkin, grams: 150 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-egg-taro
+    name: 微波芋头鸡蛋
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: taro, grams: 150 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: af-egg-rice-cake
+    name: 空气炸锅年糕蛋
+    mealSlots: [breakfast]
+    equipment: [airfryer]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: rice-cake, grams: 150 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 空气炸锅 180°C 8 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: stove-egg-fresh-noodle
+    name: 鲜刀削面鸡蛋汤
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: fresh-noodle, grams: 150 }
+      - { id: spinach, grams: 50 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: stove-wonton-egg
+    name: 小馄饨煮蛋
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 60 }
+      - { id: wonton, grams: 135 }
+      - { id: spinach, grams: 40 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-silken-bun
+    name: 微波嫩豆腐馒头
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: silken-tofu, grams: 200 }
+      - { id: steamed-bun, grams: 80 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: tuna-bun-cucumber
+    name: 金枪鱼馒头卷
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: canned-tuna, grams: 80 }
+      - { id: steamed-bun, grams: 80 }
+      - { id: cucumber, grams: 50 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 无需加热，装盘即食
+      - 加 1g 盐和葱花后装盘
+    tags: [快手, 早餐]
+
+  - id: egg-pancake-wrap-am
+    name: 手抓饼鸡蛋卷
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: hand-grab-pancake, grams: 80 }
+      - { id: lettuce, grams: 20 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: golden-egg-bun
+    name: 黄天鹅蛋配馒头
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: golden-goose-egg, grams: 106 }
+      - { id: steamed-bun, grams: 80 }
+      - { id: tomato, grams: 60 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: smoked-tofu-toast-am
+    name: 熏豆干全麦早
+    mealSlots: [breakfast]
+    equipment: []
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: smoked-tofu, grams: 80 }
+      - { id: wholewheat-bread, grams: 80 }
+      - { id: cucumber, grams: 40 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 无需加热，装盘即食
+      - 加 1g 盐和葱花后装盘
+    tags: [快手, 早餐]
+
+  - id: firm-tofu-corn-am
+    name: 老豆腐玉米早餐
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 180 }
+      - { id: corn, grams: 120 }
+      - { id: olive-oil, grams: 5 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: egg-black-rice-am
+    name: 鸡蛋黑米粥
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: black-rice, grams: 60 }
+      - { id: whole-milk, grams: 200 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: egg-durum-am
+    name: 鸡蛋通心粉早
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: durum-pasta, grams: 80 }
+      - { id: tomato, grams: 60 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: egg-job-tears-am
+    name: 鸡蛋薏米早粥
+    mealSlots: [breakfast]
+    equipment: [stove]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: job-tears, grams: 50 }
+      - { id: whole-milk, grams: 200 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 下锅煮或炒至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: mw-egg-purple-sp
+    name: 微波紫薯鸡蛋
+    mealSlots: [breakfast]
+    equipment: [microwave]
+    timeMinutes: 8
+    difficulty: 1
+    ingredients:
+      - { id: egg, grams: 120 }
+      - { id: purple-sweet-potato, grams: 150 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+    steps:
+      - 食材洗净按克数备好
+      - 入碗，盖上，微波高火 4–6 分钟至熟
+      - 加 1g 盐和葱花，趁热吃
+    tags: [快手, 早餐]
+
+  - id: box-firm-brown-broccoli-0
+    name: 老豆腐西兰花糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，西兰花洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-brown-spinach-1
+    name: 老豆腐菠菜糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，菠菜洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-tomato-2
+    name: 老豆腐番茄糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，番茄洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-baby-3
+    name: 老豆腐娃娃菜糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: baby-cabbage, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，娃娃菜洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-mushroom-4
+    name: 老豆腐蘑菇糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: mushroom, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，蘑菇洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-brown-zucchini-5
+    name: 老豆腐西葫芦糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: zucchini, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，西葫芦洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-eggplant-6
+    name: 老豆腐茄子糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: eggplant, grams: 130 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，茄子洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-carrot-7
+    name: 老豆腐胡萝卜糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: carrot, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，胡萝卜洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-bell-8
+    name: 老豆腐彩椒糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: bell-pepper, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，彩椒洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-brown-okra-9
+    name: 老豆腐秋葵糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: okra, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，秋葵洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-wood-10
+    name: 老豆腐木耳糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: wood-ear, grams: 60 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，木耳洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-shiitake-11
+    name: 老豆腐香菇糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: shiitake, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，香菇洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-snap-12
+    name: 老豆腐甜豆糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: snap-pea, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，甜豆洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-brown-celery-13
+    name: 老豆腐芹菜糙米
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: celery, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，芹菜洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 空气炸锅 190°C 8–10 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-brown-cherry-14
+    name: 老豆腐小番茄糙米
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: brown-rice, grams: 130 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，小番茄洗净切段，糙米用事先蒸好的熟饭（生米 130g）
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟加热
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-broccoli-15
+    name: 老豆腐西兰花米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，西兰花洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-spinach-16
+    name: 老豆腐菠菜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，菠菜洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-white-tomato-17
+    name: 老豆腐番茄米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，番茄洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-baby-18
+    name: 老豆腐娃娃菜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: baby-cabbage, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，娃娃菜洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-mushroom-19
+    name: 老豆腐蘑菇米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: mushroom, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，蘑菇洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-zucchini-20
+    name: 老豆腐西葫芦米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: zucchini, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，西葫芦洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐, 带饭]
+
+  - id: box-firm-white-eggplant-21
+    name: 老豆腐茄子米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: eggplant, grams: 130 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，茄子洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-carrot-22
+    name: 老豆腐胡萝卜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: carrot, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，胡萝卜洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-firm-white-bell-23
+    name: 老豆腐彩椒米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: firm-tofu, grams: 200 }
+      - { id: white-rice, grams: 140 }
+      - { id: bell-pepper, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 老豆腐按克数备好，彩椒洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-broccoli-24
+    name: 鸡胸西兰花刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西兰花洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-spinach-25
+    name: 鸡胸菠菜刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，菠菜洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-tomato-26
+    name: 鸡胸番茄刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，番茄洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-baby-27
+    name: 鸡胸娃娃菜刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: baby-cabbage, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，娃娃菜洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-mushroom-28
+    name: 鸡胸蘑菇刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: mushroom, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，蘑菇洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-zucchini-29
+    name: 鸡胸西葫芦刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: zucchini, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西葫芦洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-eggplant-30
+    name: 鸡胸茄子刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: eggplant, grams: 130 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，茄子洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-carrot-31
+    name: 鸡胸胡萝卜刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: carrot, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，胡萝卜洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-bell-32
+    name: 鸡胸彩椒刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: bell-pepper, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，彩椒洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-okra-33
+    name: 鸡胸秋葵刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: okra, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，秋葵洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-wood-34
+    name: 鸡胸木耳刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: wood-ear, grams: 60 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，木耳洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-shiitake-35
+    name: 鸡胸香菇刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: shiitake, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，香菇洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-snap-36
+    name: 鸡胸甜豆刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: snap-pea, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，甜豆洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-celery-37
+    name: 鸡胸芹菜刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: celery, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，芹菜洗净切段，刀削面按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-fresh-cherry-38
+    name: 鸡胸小番茄刀削面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: fresh-noodle, grams: 160 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，小番茄洗净切段，刀削面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-broccoli-39
+    name: 鸡胸西兰花年糕
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西兰花洗净切段，年糕按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-spinach-40
+    name: 鸡胸菠菜年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，菠菜洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-tomato-41
+    name: 鸡胸番茄年糕
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，番茄洗净切段，年糕按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-baby-42
+    name: 鸡胸娃娃菜年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: baby-cabbage, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，娃娃菜洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-mushroom-43
+    name: 鸡胸蘑菇年糕
+    mealSlots: [lunch, dinner]
+    equipment: [stove]
+    timeMinutes: 15
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: mushroom, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，蘑菇洗净切段，年糕按克数备好
+      - 热锅下油，蛋白和蔬菜炒熟，主食另上
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-broccoli-44
+    name: 鸡胸西兰花米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西兰花洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-spinach-45
+    name: 鸡胸菠菜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，菠菜洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-white-tomato-46
+    name: 鸡胸番茄米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，番茄洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-baby-47
+    name: 鸡胸娃娃菜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: baby-cabbage, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，娃娃菜洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-mushroom-48
+    name: 鸡胸蘑菇米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: mushroom, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，蘑菇洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-zucchini-49
+    name: 鸡胸西葫芦米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: zucchini, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西葫芦洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-eggplant-50
+    name: 鸡胸茄子米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: eggplant, grams: 130 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，茄子洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-white-carrot-51
+    name: 鸡胸胡萝卜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: carrot, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，胡萝卜洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-bell-52
+    name: 鸡胸彩椒米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: bell-pepper, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，彩椒洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-okra-53
+    name: 鸡胸秋葵米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: okra, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，秋葵洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-wood-54
+    name: 鸡胸木耳米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: wood-ear, grams: 60 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，木耳洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-shiitake-55
+    name: 鸡胸香菇米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: shiitake, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，香菇洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-white-snap-56
+    name: 鸡胸甜豆米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: snap-pea, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，甜豆洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-celery-57
+    name: 鸡胸芹菜米饭
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: celery, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，芹菜洗净切段，米饭按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-white-cherry-58
+    name: 鸡胸小番茄米饭
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: white-rice, grams: 140 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，小番茄洗净切段，米饭按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-zucchini-59
+    name: 鸡胸西葫芦年糕
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: zucchini, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西葫芦洗净切段，年糕按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-eggplant-60
+    name: 鸡胸茄子年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: eggplant, grams: 130 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，茄子洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-rice-carrot-61
+    name: 鸡胸胡萝卜年糕
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: carrot, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，胡萝卜洗净切段，年糕按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-bell-62
+    name: 鸡胸彩椒年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: bell-pepper, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，彩椒洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-okra-63
+    name: 鸡胸秋葵年糕
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: okra, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，秋葵洗净切段，年糕按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-wood-64
+    name: 鸡胸木耳年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: wood-ear, grams: 60 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，木耳洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-shiitake-65
+    name: 鸡胸香菇年糕
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: shiitake, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，香菇洗净切段，年糕按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-rice-snap-66
+    name: 鸡胸甜豆年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: snap-pea, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，甜豆洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-celery-67
+    name: 鸡胸芹菜年糕
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: celery, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，芹菜洗净切段，年糕按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-rice-cherry-68
+    name: 鸡胸小番茄年糕
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: rice-cake, grams: 160 }
+      - { id: cherry-tomato, grams: 80 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，小番茄洗净切段，年糕按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-egg-broccoli-69
+    name: 鸡胸西兰花鸡蛋面
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: egg-noodle, grams: 140 }
+      - { id: broccoli, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，西兰花洗净切段，鸡蛋面按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]
+
+  - id: box-chicken-egg-spinach-70
+    name: 鸡胸菠菜鸡蛋面
+    mealSlots: [lunch, dinner]
+    equipment: [microwave]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: egg-noodle, grams: 140 }
+      - { id: spinach, grams: 100 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，菠菜洗净切段，鸡蛋面按克数备好
+      - 一盒装好，加 8g 橄榄油和酱油，微波高火 6–8 分钟
+      - 撒葱花即可
+    tags: [完整餐, 可复热]
+
+  - id: box-chicken-egg-tomato-71
+    name: 鸡胸番茄鸡蛋面
+    mealSlots: [lunch, dinner]
+    equipment: [airfryer]
+    timeMinutes: 12
+    difficulty: 1
+    ingredients:
+      - { id: chicken-breast, grams: 130 }
+      - { id: egg-noodle, grams: 140 }
+      - { id: tomato, grams: 120 }
+      - { id: olive-oil, grams: 8 }
+      - { id: salt, grams: 1 }
+      - { id: soy-sauce, grams: 8 }
+      - { id: scallion, grams: 5 }
+      - { id: garlic, grams: 5 }
+    steps:
+      - 鸡胸按克数备好，番茄洗净切段，鸡蛋面按克数备好
+      - 空气炸锅 190°C 10–12 分钟至熟
+      - 撒葱花即可
+    tags: [完整餐]

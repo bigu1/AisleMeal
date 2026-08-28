@@ -1,0 +1,21 @@
+{
+  "name": "AisleMeal 货架健餐",
+  "short_name": "AisleMeal",
+  "description": "勾选手头食材，再选想吃的菜，排出三餐。数据只留本机。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F3F6F4",
+  "theme_color": "#1F4D3A",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

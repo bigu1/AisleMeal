@@ -1,0 +1,17 @@
+# AisleMeal (货架健餐)
+
+> Open-source, local-first healthy meal planner and grocery list for Chinese home cooking.
+
+AisleMeal helps people who struggle to cook healthy meals: enter body stats for daily calorie/protein/fat/carb targets, tick pantry ingredients (or a common-kitchen preset), pick dishes for the week, auto-plan remaining slots, then generate a named shopping list only after kcal and protein land in 90–110% of the cooked-meal target. Recipes are at most 5 steps and filtered by home equipment (rice cooker, air fryer, microwave, stove).
+
+It is not a supermarket, not grocery delivery, not a cloud diet tracker, and not medical advice. No login, no backend, no prices. User data stays in browser localStorage (`aislemeal:v1`).
+
+- Site / repo: https://github.com/bigu1/AisleMeal
+- Chinese README: https://github.com/bigu1/AisleMeal/blob/main/README.md
+- English README: https://github.com/bigu1/AisleMeal/blob/main/README.en.md
+- Spec: https://github.com/bigu1/AisleMeal/blob/main/docs/SPEC.md
+- License: MIT
+- Stack: Next.js 16 static export, TypeScript, Tailwind, zustand, vitest
+- Version: 0.6.0 (~210 recipes, 205 generic ingredients)
+
+Optional: `npm install && npm run dev` → http://localhost:3000 (Node.js 20+).
