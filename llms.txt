@@ -11,7 +11,9 @@ It is not a supermarket, not grocery delivery, not a cloud diet tracker, and not
 - English README: https://github.com/bigu1/AisleMeal/blob/main/README.en.md
 - Spec: https://github.com/bigu1/AisleMeal/blob/main/docs/SPEC.md
 - License: MIT
-- Stack: Next.js 16 static export, TypeScript, Tailwind, zustand, vitest
+- Stack: Next.js 16 static export, TypeScript, Tailwind, zustand persist (localStorage `aislemeal:v1` v8), vitest
+- Architecture: `src/app` pages → zustand store → pure `src/domain` (Mifflin-St Jeor, planner, 90–110% kcal/protein gate on remaining target, shopping pack ceil). No API routes.
+- Data: `data/ingredients.json` + `data/recipes.yaml` compiled by `scripts/build-data.mjs` into `src/generated/`
 - Version: 0.6.0 (~210 recipes, 205 generic ingredients)
 
-Optional: `npm install && npm run dev` → http://localhost:3000 (Node.js 20+).
+Optional: `npm install && npm run dev` → http://localhost:3000 (Node.js 20+). Architecture: README.md §架构 / README.en.md §Architecture.

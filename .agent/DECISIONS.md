@@ -40,3 +40,4 @@
 - 2026-08-28 · 选了 persist 继续用 basketIds 当货架勾选、另加 customIngredients，而不是新字段 shelfIds，因为已有 toggle/sanitize 更小可测；v7 catalog 迁常见厨房，basket 模式保留原篮
 - 2026-08-28 · 选了删今天页库存免责、UI改成我的食材、新用户空篮自己勾、关 Next 开发 N 标、不加第五栏也不扩库，而不是预勾常见厨房或加底栏，因为 205 条对 210 菜够用且调味默认折叠；开源仍必须 orphan
 - 2026-08-28 · 选了 README 中文为主、英文独立 README.en.md 用徽章按钮跳转，并 orphan 推到已有空仓 bigu1/AisleMeal 后改公开，而不是推本地 main 全历史或自动部署 Pages，因为旧链含店址且 SPEC 禁止 CI deploy
+- 2026-08-28 · 选了把架构写进 README（对照 nutrition/planner/store 源码）而不是另开 ARCHITECTURE.md，因为用户要 README 更详细；公开仓用快照第二笔更新，不推本地 main
