@@ -104,7 +104,7 @@ describe("data integrity", () => {
 
   it("食材通用名，不含店招或品牌货架全文", () => {
     for (const item of ingredients) {
-      expect(item.name, item.id).not.toMatch(/小象|象大厨|莱翔/);
+      expect(item.name, item.id).not.toMatch(/小象|象大厨/);
       expect(item.popularity).toBeGreaterThanOrEqual(1);
     }
     const yogurt = ingredients.find((item) => item.id === "greek-yogurt");

@@ -24,7 +24,7 @@ describe("0.6 honesty copy", () => {
     const banner = src("src/components/StoreSourceBanner.tsx");
     expect(banner).toContain("已选");
     expect(banner).toContain("种食材");
-    expect(banner).not.toMatch(/实时库存|capturedAt|莱翔|小象超市|我的货架/);
+    expect(banner).not.toMatch(/实时库存|capturedAt|小象超市|我的货架/);
   });
 
   it("今天页不挂库存免责，开发指示器关闭", () => {

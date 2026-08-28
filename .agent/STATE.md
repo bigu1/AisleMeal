@@ -1,22 +1,22 @@
 ---
-phase: 0.6 已公开；README 补了架构
+phase: 0.6 已公开并收工；采集只留本机归档
 verify: npm test && npm run lint && npx tsc --noEmit
 next: grok
 ---
 
 # 现在的状况
 
-公开仓 https://github.com/bigu1/AisleMeal （orphan 链，勿推本地 main）。本轮 README/README.en.md 补了架构、目录、路由、营养/排餐/门闩/清单、persist v8，对照源码。还要再快照一笔推到 GitHub。
+公开仓 https://github.com/bigu1/AisleMeal 。本机归档：`Documents/AisleMeal-归档`（610 SKU + 货架名食材，勿上传）。公开仓测试已去掉路名。产品代码仍以 GitHub 为准。
 
 # 下一步
 
-日常回 grok。更新公开仓：clone 公开仓浅拷 + 覆盖文件 + noreply 提交，禁止 `git push` 本地 main。不要 Pages。
+项目收工。日常若再改：从 GitHub clone，不要 `git push` 旧本地全历史。不要 Pages。归档夹不要进仓。
 
 # 试过但没成
 
-- README 仍无产品截图。
+- 无。
 
 # 别动 / 已知妥协
 
-- 53 `per100g`、nutritionGate、handoff、persist 键名。不加第五栏、不加菜。
-- `scopeMode` 仍死字段。产品名仍「货架健餐」。
+- 53 `per100g`、公开仓仍可出现品牌名「小象」用于剥前缀测试，不是店址。
+- 归档夹含门店元数据，仅本机。
